@@ -1,0 +1,2 @@
+#!/bin/sh
+python3 /data/drivers/venus-homemanager/dbus-homemanager.py
