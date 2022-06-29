@@ -1,4 +1,4 @@
-# venus-homemanager Service
+# venus-homemanager service
 ## Purpose
 This service is meant to be run on VenusOS from Victron.
 
@@ -14,7 +14,7 @@ I recommend creating a subdirectory inside the `/data` directory to prevent Venu
 mkdir /data/drivers
 cd /data/drivers
 git clone --recurse-submodules https://github.com/c0deliner/venus-homemanager.git
-ch venus-homemanager
+cd venus-homemanager
 chmod +x install.sh
 ./install.sh
 ```
