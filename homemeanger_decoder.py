@@ -82,10 +82,11 @@ class HomeManager20:
         self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         mreq = struct.pack("4sL", socket.inet_aton(MCAST_GRP), socket.INADDR_ANY)
         self.sock.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, mreq)
+        self.sock.settimeout(1)
         self.sock.bind(('', MCAST_PORT))
 
     def _receive_data(self):
-        self.datagram = self.sock.recv(650)
+        self.datagram = self.sock.recv(608)
 
     def _decode_data(self):
         if self.datagram[:4] != b'SMA\x00':
