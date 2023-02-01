@@ -8,6 +8,7 @@ echo "#!/bin/bash" > "$SCRIPT_DIR/kill_me.sh"
 echo "kill \$(pgrep -f \"python $SCRIPT_DIR/dbus-homemanager.py\")" >> "$SCRIPT_DIR"/kill_me.sh
 
 # Run script
+mkdir -p "$SCRIPT_DIR/service"
 echo "#!/bin/bash" > "$SCRIPT_DIR/service/run"
 echo "python3 $SCRIPT_DIR/dbus-homemanager.py" >> "$SCRIPT_DIR"/service/run
 
